@@ -25,7 +25,6 @@ $(document).ready(function () {
         if (correctChoice = true) {
             confirm("Correct!");
         }
-        console.log(time);
     });
     $("#button-04").on("click", function () {
         alert("Wrong!");
@@ -47,7 +46,6 @@ $(document).ready(function () {
         if (correctChoice = true) {
             confirm("Correct!");
         }
-        console.log(time);
     });
 
     // Question #3
@@ -60,7 +58,6 @@ $(document).ready(function () {
         if (correctChoice = true) {
             confirm("Correct!");
         }
-        console.log(time);
     });
     $("#button-11").on("click", function () {
         alert("Wrong!");
@@ -76,7 +73,6 @@ $(document).ready(function () {
         if (correctChoice = true) {
             confirm("Correct!");
         }
-        console.log(time);
     });
     $("#button-14").on("click", function () {
         alert("Wrong!");
@@ -98,7 +94,6 @@ $(document).ready(function () {
         if (correctChoice = true) {
             confirm("Correct!");
         }
-        console.log(time);
     });
     $("#button-19").on("click", function () {
         alert("Wrong!");
@@ -125,7 +120,7 @@ function saveScore() {
     var initials = getInitials;
     
     var newScore = {
-        //score: time,
+        score: time,
         initials: initials
     }
 
