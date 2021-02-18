@@ -1,0 +1,38 @@
+h1 {
+    font-size: 300px;
+    font-family: 'Abel';
+    text-align: center;
+    opacity: 85%;
+    color: dimgray;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Abel';
+    text-align: center;
+    opacity: 85%;
+    color: dimgray;
+}
+
+label {
+    font-family: 'Abel';
+    color: dimgray;
+}
+
+#passwordHelpBlock {
+    font-family: 'Abel';
+}
+
+.btn {
+    font-family: 'Abel';
+}
+
+.col {
+    padding: 50px;
+}
+
+.timer {
+    font-family: 'Abel';
+    float: right;
+    color: dimgray;
+}
