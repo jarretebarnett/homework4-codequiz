@@ -111,7 +111,7 @@ function startTimer(duration, display) {
         
         seconds = parseInt(timer % 60, 10);
 
-        display.textContent = seconds;
+        display = seconds;
 
         if (--timer < 0) {
             timer = 0;
@@ -121,8 +121,8 @@ function startTimer(duration, display) {
 
 function saveScore() {
 
-    //var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-    var initials = getInitials.value;
+    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+    var initials = getInitials;
     
     var newScore = {
         //score: time,
@@ -133,7 +133,9 @@ function saveScore() {
 
     highScores.push(newScore);
     window.localStorage.setItem("highScores", JSON.stringify(highScores));
-    //window.location.href = "scorepage.html";
+    window.location.href = "scorepage.html";
 }
 
-saveScoreBtn.onclick = saveScore();
+$(saveScoreBtn).on("click", function saveScore() {
+
+});
