@@ -1,11 +1,12 @@
 var saveScoreBtn = document.getElementById("submit");
 var getInitials = document.getElementById("inputInitials");
+var display = document.querySelector('#time');
+var time = 0;
 
 $(document).ready(function () {
 
     window.onload = function () {
-        var thirtySeconds = 30,
-        display = document.querySelector('#time');
+        var thirtySeconds = 30;
         startTimer(thirtySeconds, display);
     };
 
@@ -19,10 +20,12 @@ $(document).ready(function () {
         alert("Wrong!");
     });
     $("#button-03").on("click", function () {
+        var timeScore = display.textContent;
+        time += parseInt(timeScore);
         if (correctChoice = true) {
             confirm("Correct!");
-            // saveScore();
         }
+        console.log(time);
     });
     $("#button-04").on("click", function () {
         alert("Wrong!");
@@ -39,10 +42,12 @@ $(document).ready(function () {
         alert("Wrong!");
     });
     $("#button-08").on("click", function () {
+        var timeScore = display.textContent;
+        time += parseInt(timeScore);
         if (correctChoice = true) {
             confirm("Correct!");
-            // saveScore();
         }
+        console.log(time);
     });
 
     // Question #3
@@ -50,10 +55,12 @@ $(document).ready(function () {
         alert("Wrong!");
     });
     $("#button-10").on("click", function () {
+        var timeScore = display.textContent;
+        time += parseInt(timeScore);
         if (correctChoice = true) {
             confirm("Correct!");
-            // saveScore();
         }
+        console.log(time);
     });
     $("#button-11").on("click", function () {
         alert("Wrong!");
@@ -64,10 +71,12 @@ $(document).ready(function () {
         alert("Wrong!");
     });
     $("#button-13").on("click", function () {
+        var timeScore = display.textContent;
+        time += parseInt(timeScore);
         if (correctChoice = true) {
             confirm("Correct!");
-            // saveScore();
         }
+        console.log(time);
     });
     $("#button-14").on("click", function () {
         alert("Wrong!");
@@ -84,10 +93,12 @@ $(document).ready(function () {
         alert("Wrong!");
     });
     $("#button-18").on("click", function () {
+        var timeScore = display.textContent;
+        time += parseInt(timeScore);
         if (correctChoice = true) {
             confirm("Correct!");
-            // saveScore();
         }
+        console.log(time);
     });
     $("#button-19").on("click", function () {
         alert("Wrong!");
@@ -109,15 +120,20 @@ function startTimer(duration, display) {
 }
 
 function saveScore() {
-    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+
+    //var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
     var initials = getInitials.value;
+    
     var newScore = {
-        score: time,
+        //score: time,
         initials: initials
     }
+
+    console.log(newScore);
+
     highScores.push(newScore);
     window.localStorage.setItem("highScores", JSON.stringify(highScores));
-    window.location.href = "scorepage.html";
+    //window.location.href = "scorepage.html";
 }
 
 saveScoreBtn.onclick = saveScore();
